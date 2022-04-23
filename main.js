@@ -1,10 +1,16 @@
 const express = require('express');
+// const Math = require('Math');
 
 console.log("Hello World\n");
-
-while(1){
-    setInterval(function(){   
-        console.log("Rolling the Dice: "+Math.floor((Math.random()*6)+1)); 
+function wait(ms) {
+    var start = Date.now(),
+        now = start;
+    while (now - start < ms) {
+      now = Date.now();
+    }
+}
+while(1){   
+    console.log("Rolling the Dice: "+Math.floor((Math.random()*6)+1)); 
     
-     }, 2000);
+    wait(2000);
 }
