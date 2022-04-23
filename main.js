@@ -9,8 +9,10 @@ function wait(ms) {
       now = Date.now();
     }
 }
-while(1){   
+var count=0;
+const THRESH = 20;
+while(count<THRESH){   
     console.log("Rolling the Dice: "+Math.floor((Math.random()*6)+1)); 
-    
+    count++;
     wait(2000);
 }
